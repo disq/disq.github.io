@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Bimar (Crazy)</title>
+  <title>Bimar</title>
 
   <link href="style/main.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="favicon.ico">
@@ -60,6 +60,47 @@
 }
 .tile.tile-2048 .tile-inner {
 	background:url(img/bimar_gif.gif) no-repeat;
+}
+
+.calm .tile.tile-2 .tile-inner {
+  background:url(img/serdar.jpg) no-repeat;
+}
+.calm .tile.tile-4 .tile-inner {
+  background:url(img/erdem.jpg) no-repeat;
+}
+.calm .tile.tile-8 .tile-inner {
+  background:url(img/soner.jpg) no-repeat;
+}
+.calm .tile.tile-16 .tile-inner {
+  background:url(img/ezgi.jpg) no-repeat;
+}
+.calm .tile.tile-32 .tile-inner {
+  background:url(img/orhan.jpg) no-repeat;
+}
+.calm .tile.tile-64 .tile-inner {
+  background:url(img/kemal.jpg) no-repeat;
+}
+.calm .tile.tile-128 .tile-inner {
+  background:url(img/doruk.jpg) no-repeat;
+}
+.calm .tile.tile-256 .tile-inner {
+  background:url(img/ayhan_gif.gif) no-repeat;
+}
+.calm .tile.tile-512 .tile-inner {
+  background:url(img/mehmet.jpg) no-repeat;
+}
+.calm .tile.tile-1024 .tile-inner {
+  background:url(img/renan.jpg) no-repeat;
+}
+.calm .tile.tile-2048 .tile-inner {
+  background:url(img/bimar.jpg) no-repeat;
+}
+P.start-animations,
+.calm P.stop-animations {
+  display:none;
+}
+.calm P.start-animations {
+  display:block;
 }
 </style>
 </head>
@@ -119,8 +160,11 @@
       <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same face touch, they <strong>merge into one!</strong>
     </p>
     <hr>
-    <p>
-    Check out the <a href="../2048/" style="color:green;">regular version</a>.
+    <p class="stop-animations">
+    To stop animations <a href="#" onclick="document.getElementsByTagName('BODY')[0].className='calm';return false;" style="color:green;">click here</a>.
+    </p>
+    <p class="start-animations">
+    To start animations <a href="#" onclick="document.getElementsByTagName('BODY')[0].className='';return false;" style="color:green;">click here</a>.
     </p>
     <hr>
     <p>
