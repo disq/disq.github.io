@@ -95,13 +95,14 @@
 .calm .tile.tile-2048 .tile-inner {
   background:url(img/bimar.jpg) no-repeat;
 }
-P.start-animations,
-.calm P.stop-animations {
-  display:none;
+.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
 }
-.calm P.start-animations {
-  display:block;
-}
+
 </style>
 </head>
 <body>
@@ -160,11 +161,8 @@ P.start-animations,
       <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same face touch, they <strong>merge into one!</strong>
     </p>
     <hr>
-    <p class="stop-animations">
-    To stop animations <a href="#" onclick="document.getElementsByTagName('BODY')[0].className='calm';return false;" style="color:green;">click here</a>.
-    </p>
-    <p class="start-animations">
-    To start animations <a href="#" onclick="document.getElementsByTagName('BODY')[0].className='';return false;" style="color:green;">click here</a>.
+    <p>
+      <label unselectable="on" class="unselectable"><input type="checkbox" onclick="document.getElementsByTagName('BODY')[0].className=this.checked?'':'calm';" checked="checked">Animations</label>
     </p>
     <hr>
     <p>
